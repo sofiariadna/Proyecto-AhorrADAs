@@ -15,7 +15,76 @@
     <!--Title-->
     <title>Proyecto AhorrADAs</title>
 </head>
-<body>
-    
+<body class="font-['Fira_Sans'] bg-slate-200">
+    <!--Header-->
+    <header class=" flex justify-between bg-emerald-400 text-white w-full h-24">
+        <div class="flex flex-row items-center text-4xl">
+            <i class="fa-solid fa-wallet ml-9 mt-9 mb-7"></i>
+            <h1 class="ml-4 mt-9 mb-7">AhorrADAs</h1>
+        </div>
+            <ul class="flex flex-row gap-x-10 mt-9 mr-10 text-base">
+                <li><i class="fa-solid fa-chart-line mr-2"></i>Balance</li>
+                <li><i class="fa-solid fa-tag mr-2"></i>Categorías</li>
+                <li><i class="fa-solid fa-chart-pie mr-2"></i>Reportes</li>
+            </ul> 
+    </header>
+    <!--/Header-->
+    <!--Balance and Filters-->
+    <aside class="bg-slate-50 p-10 ml-40 mt-16 rounded-md shadow-md	w-1/5">
+        <h1 class="text-3xl font-semibold mb-11">Balance</h1>
+        <section class="flex flex-column justify-between text-xl mb-5">
+            <div>Ganancias</div>
+            <div class="text-lime-500">+$0</div>
+        </section>
+        <section class="flex flex-column justify-between text-xl mb-5">
+            <div>Gastos</div>
+            <div class="text-red-700">-$0</div> 
+        </section>
+        <section class="flex flex-column justify-between text-2xl mt-7">
+            <div>Total</div>
+            <div class="font-bold">$0</div> 
+        </section>   
+    </aside>
+    <aside class="bg-slate-50 p-10 ml-40 mt-9 mb-9 rounded-md shadow-md w-1/5 h-[459px]">
+        <div class="flex flex-row">
+            <h1 class="text-2xl font-semibold mr-14 mb-6">Filtros</h1>
+            <a href="#" id="hide-filters" class="text-sm text-blue-700 ml-2 mt-px">Ocultar filtros</a>
+        </div>
+        <div class="mb-4">
+            <label for="" class="text-xl">Tipo</label>
+            <select class="w-full h-9 mt-2 border-[1px] border-slate-300 rounded">
+                <option value="">Todos</option>
+                <option value="">Gasto</option>
+                <option value="">Ganancia</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="" class="text-xl">Categoría</label>
+            <select class="w-full h-9 mt-2 border-[1px] border-slate-300 rounded">
+                <option value="">Todas</option>
+                <option value="">Comida</option>
+                <option value="">Servicios</option>
+                <option value="">Salidas</option>
+                <option value="">Educación</option>
+                <option value="">Transporte</option>
+                <option value="">Trabajo</option>    
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="" class="text-xl">Desde</label>
+            <input type="date" class="w-full h-9 mt-2 border-[1px] border-slate-300 rounded">
+        </div>
+        <div class="mb-4">
+            <label for="" class="text-xl">Ordenar por</label>
+            <select class="w-full h-9 mt-2 border-[1px] border-slate-300 rounded">
+                <option value="">Más reciente</option>
+                <option value="">Menos reciente</option>
+                <option value="">Mayor monto</option>
+                <option value="">Menor monto</option>
+                <option value="">A/Z</option>
+                <option value="">Z/A</option>   
+            </select>
+        </div>
+    </aside>  
 </body>
 </html>
