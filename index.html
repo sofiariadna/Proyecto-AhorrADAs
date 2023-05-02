@@ -87,7 +87,7 @@
         </div>
     </aside>
     <!--Balance and Filters-->
-    <!--New Operation-->
+    <!--Operations-->
         <!--<div class="absolute top-1/2 transform -translate-y-1/2 right-0 w-2/4 h-[459px] mt-[63.6px] mr-56 bg-slate-50 rounded-md shadow-md">
             <h2 class="relative top-2.5 left-2.5 text-2xl font-semibold p-2">Operaciones</h2>
             <button class="absolute top-7 right-2.5 mr-6 p-2.5 rounded bg-emerald-400 text-white">+ Nueva Operación</button>
@@ -97,6 +97,35 @@
                 <h2 class="text-xl text-center font-semibold mt-6">Sin resultados</h2>
                 <p class="text-xl text-center text-xs font-light mt-6">Cambia los filtros o agrega operaciones</p>
         </div>
+    <!-Operations-->
+    <!--New Operation-->
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/4 h-[500px] mt-[63.6px] bg-slate-50 rounded-md shadow-md">
+        <h2 class="text-3xl font-semibold p-4">Nueva operación</h2>
+        <label for="" class="text-sm font-semibold p-4">Descripción</label>
+        <input type="text" name="text" id="text" class="flex flex-column ml-[14.8px] mt-2 w-11/12 h-10 border-solid border-gray-300 border rounded-sm">
+        <label for="" class="text-sm font-semibold p-4">Monto</label>
+        <input type="number" name="text" value="0" id="text" class="flex flex-column ml-[14.8px] mt-2 w-11/12 h-10 p-2 border-solid border-gray-300 border rounded-sm">
+        <label for="" class="text-sm font-semibold p-4">Tipo</label>
+            <select class="flex flex-column ml-[14.8px] mt-2 w-11/12 h-10 p-2 border-solid border-gray-300 border rounded-sm">
+                <option value="">Gasto</option>
+                <option value="">Ganancia</option>  
+            </select>
+            <label for="" class="text-sm font-semibold p-4">Categoría</label>
+            <select class="flex flex-column ml-[14.8px] mt-2 w-11/12 h-10 p-2 border-solid border-gray-300 border rounded-sm">
+                <option value="">Comida</option>
+                <option value="">Servicios</option>
+                <option value="">Salidas</option>
+                <option value="">Educación</option>
+                <option value="">Transporte</option>
+                <option value="">Trabajo</option>   
+            </select>
+        <label for="" class="text-sm font-semibold p-4">Fecha</label>
+        <input type="date" class="flex flex-column ml-[14.8px] mt-2 w-11/12 h-10 p-2 border-solid border-gray-300 border rounded-sm">
+        <div style="width: 100%;">
+            <button class="ml-9 mr-10 mt-4 p-2 h-10 rounded bg-emerald-400 text-white float-right">Agregar</button>
+            <button class="ml-9 mr-px mt-4 p-2 h-10 rounded bg-gray-300 text-gray-700 float-right">Cancelar</button>
+          </div>          
+    </div>
     <!--New Operation-->
     <!--Categories-->
         <!--<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/4 h-[500px] mt-[63.6px] bg-slate-50 rounded-md shadow-md">
@@ -137,14 +166,16 @@
                 <a href="#" class="ml-2 text-sm text-blue-700">Eliminar</a>
             </div>
         </div>
+    <!-Categories-->
     <!--Reports<!-->
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/4 h-[500px] mt-[63.6px] bg-slate-50 rounded-md shadow-md">
+    <!--<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/4 h-[500px] mt-[63.6px] bg-slate-50 rounded-md shadow-md">
         <h2 class="text-3xl font-semibold p-4">Reportes</h2>
         <figure class="flex items-center justify-center mt-16">
             <img src="./img/chart.svg" alt="report-icon" class="w-1/2">
         </figure>
         <h2 class="text-xl text-center font-semibold mt-6">Operaciones insuficientes</h2>
         <p class="text-xl text-center text-xs font-light mt-6">Prueba agregando más operaciones</p>
-    </div>
+    </div><!-->
+    <!--Reports-->
 </body>
 </html>
