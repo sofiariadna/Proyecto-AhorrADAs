@@ -23,14 +23,14 @@
             <h1 class="ml-4 mt-9 mb-7">AhorrADAs</h1>
         </div>
             <ul class="flex flex-row gap-x-10 mt-9 mr-10 text-base">
-                <li><i class="fa-solid fa-chart-line mr-2"></i>Balance</li>
-                <li><i class="fa-solid fa-tag mr-2"></i>Categorías</li>
-                <li><i class="fa-solid fa-chart-pie mr-2"></i>Reportes</li>
+                <li id="balance-btn"><i class="fa-solid fa-chart-line mr-2"></i>Balance</li>
+                <li id="categories-btn"><i class="fa-solid fa-tag mr-2"></i>Categorías</li>
+                <li id="reports-btn"><i class="fa-solid fa-chart-pie mr-2"></i>Reportes</li>
             </ul> 
     </header>
     <!--/Header-->
     <!--Balance and Filters-->
-    <!--<aside class="bg-slate-50 p-10 ml-40 mt-16 rounded-md shadow-md	w-1/5">
+    <aside class="bg-slate-50 p-10 ml-40 mt-16 rounded-md shadow-md	w-1/5" id="balance-container">
         <h1 class="text-3xl font-semibold mb-11">Balance</h1>
         <section class="flex flex-column justify-between text-xl mb-5">
             <div>Ganancias</div>
@@ -45,7 +45,7 @@
             <div class="font-bold">$0</div> 
         </section>   
     </aside>
-    <aside class="bg-slate-50 p-10 ml-40 mt-9 mb-9 rounded-md shadow-md w-1/5 h-[459px]">
+    <aside class="bg-slate-50 p-10 ml-40 mt-9 mb-9 rounded-md shadow-md w-1/5 h-[459px]" id="filters-container">
         <div class="flex flex-row">
             <h1 class="text-2xl font-semibold mr-14 mb-6">Filtros</h1>
             <a href="#" id="hide-filters" class="text-sm text-blue-700 ml-2 mt-px">Ocultar filtros</a>
@@ -86,9 +86,9 @@
             </select>
         </div>
     </aside>
-    <!--Balance and Filters-->
+    <!--/Balance and Filters-->
     <!--Operations-->
-        <!--<div class="absolute top-1/2 transform -translate-y-1/2 right-0 w-2/4 h-[459px] mt-[63.6px] mr-56 bg-slate-50 rounded-md shadow-md">
+        <div class="absolute top-1/2 transform -translate-y-1/2 right-0 w-2/4 h-[459px] mt-[63.6px] mr-56 bg-slate-50 rounded-md shadow-md" id="operations-container">
             <h2 class="relative top-2.5 left-2.5 text-2xl font-semibold p-2">Operaciones</h2>
             <button class="absolute top-7 right-2.5 mr-6 p-2.5 rounded bg-emerald-400 text-white">+ Nueva Operación</button>
             <figure class="flex items-center justify-center mt-16">
@@ -97,9 +97,9 @@
                 <h2 class="text-xl text-center font-semibold mt-6">Sin resultados</h2>
                 <p class="text-xl text-center text-xs font-light mt-6">Cambia los filtros o agrega operaciones</p>
         </div>
-    <!-Operations-->
+    <!--/Operations-->
     <!--New Operation-->
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/4 h-[500px] mt-[63.6px] bg-slate-50 rounded-md shadow-md">
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/4 h-[500px] mt-[63.6px] bg-slate-50 rounded-md shadow-md hidden">
         <h2 class="text-3xl font-semibold p-4">Nueva operación</h2>
         <label for="" class="text-sm font-semibold p-4">Descripción</label>
         <input type="text" name="text" id="text" class="flex flex-column ml-[14.8px] mt-2 w-11/12 h-10 border-solid border-gray-300 border rounded-sm">
@@ -126,9 +126,9 @@
             <button class="ml-9 mr-px mt-4 p-2 h-10 rounded bg-gray-300 text-gray-700 float-right">Cancelar</button>
           </div>          
     </div>
-    <!--New Operation-->
+    <!--/New Operation-->
     <!--Categories-->
-        <!--<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/4 h-[500px] mt-[63.6px] bg-slate-50 rounded-md shadow-md">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/4 h-[500px] mt-[63.6px] bg-slate-50 rounded-md shadow-md hidden" id="categories-card">
             <h2 class="text-3xl font-semibold p-4">Categorías</h2>
             <label for="" class="text-sm font-semibold p-4">Nombre</label>
             <div class="flex flex-row">
@@ -166,16 +166,18 @@
                 <a href="#" class="ml-2 text-sm text-blue-700">Eliminar</a>
             </div>
         </div>
-    <!-Categories-->
+    <!--/Categories-->
     <!--Reports<!-->
-    <!--<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/4 h-[500px] mt-[63.6px] bg-slate-50 rounded-md shadow-md">
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/4 h-[500px] mt-[63.6px] bg-slate-50 rounded-md shadow-md hidden" id="reports-card">
         <h2 class="text-3xl font-semibold p-4">Reportes</h2>
         <figure class="flex items-center justify-center mt-16">
             <img src="./img/chart.svg" alt="report-icon" class="w-1/2">
         </figure>
         <h2 class="text-xl text-center font-semibold mt-6">Operaciones insuficientes</h2>
         <p class="text-xl text-center text-xs font-light mt-6">Prueba agregando más operaciones</p>
-    </div><!-->
-    <!--Reports-->
+    </div>
+    <!--/Reports-->
+    <script src="js/main.js"></script>
+
 </body>
 </html>
