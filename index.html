@@ -102,16 +102,16 @@
     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/4 h-[500px] mt-[63.6px] bg-slate-50 rounded-md shadow-md hidden" id="new-operations-container">
         <h2 class="text-3xl font-semibold p-4">Nueva operación</h2>
         <label for="" class="text-sm font-semibold p-4">Descripción</label>
-        <input type="text" name="text" id="text" class="flex flex-column ml-[14.8px] mt-2 w-11/12 h-10 border-solid border-gray-300 border rounded-sm">
+        <input type="text" name="text" id="description" class="flex flex-column ml-[14.8px] mt-2 w-11/12 h-10 border-solid border-gray-300 border rounded-sm">
         <label for="" class="text-sm font-semibold p-4">Monto</label>
-        <input type="number" name="text" value="0" id="text" class="flex flex-column ml-[14.8px] mt-2 w-11/12 h-10 p-2 border-solid border-gray-300 border rounded-sm">
+        <input type="number" name="text" value="0" id="amount" class="flex flex-column ml-[14.8px] mt-2 w-11/12 h-10 p-2 border-solid border-gray-300 border rounded-sm">
         <label for="" class="text-sm font-semibold p-4">Tipo</label>
-            <select class="flex flex-column ml-[14.8px] mt-2 w-11/12 h-10 p-2 border-solid border-gray-300 border rounded-sm">
+            <select class="flex flex-column ml-[14.8px] mt-2 w-11/12 h-10 p-2 border-solid border-gray-300 border rounded-sm" id="type">
                 <option value="">Gasto</option>
                 <option value="">Ganancia</option>  
             </select>
             <label for="" class="text-sm font-semibold p-4">Categoría</label>
-            <select class="flex flex-column ml-[14.8px] mt-2 w-11/12 h-10 p-2 border-solid border-gray-300 border rounded-sm">
+            <select class="flex flex-column ml-[14.8px] mt-2 w-11/12 h-10 p-2 border-solid border-gray-300 border rounded-sm" id="category">
                 <option value="">Comida</option>
                 <option value="">Servicios</option>
                 <option value="">Salidas</option>
@@ -120,7 +120,7 @@
                 <option value="">Trabajo</option>   
             </select>
         <label for="" class="text-sm font-semibold p-4">Fecha</label>
-        <input type="date" class="flex flex-column ml-[14.8px] mt-2 w-11/12 h-10 p-2 border-solid border-gray-300 border rounded-sm">
+        <input type="date" class="flex flex-column ml-[14.8px] mt-2 w-11/12 h-10 p-2 border-solid border-gray-300 border rounded-sm" id="date">
         <div style="width: 100%;">
             <button class="ml-9 mr-10 mt-4 p-2 h-10 rounded bg-emerald-400 text-white float-right" id="add-btn">Agregar</button>
             <button class="ml-9 mr-px mt-4 p-2 h-10 rounded bg-gray-300 text-gray-700 float-right" id="cancel-btn">Cancelar</button>
