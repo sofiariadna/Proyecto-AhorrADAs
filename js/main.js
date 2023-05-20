@@ -11,6 +11,8 @@ const randomId = () => self.crypto.randomUUID()
 //Local Storage Handlers//
 const getData = (key) => JSON.parse(localStorage.getItem(key))
 const setData = (key, array) => localStorage.setItem(key, JSON.stringify(array))
+//Este va ir en initializeApp junto a los eventos//
+const allOperations = getData("operations") || []
 
 //Show Categories Card//
 $("#categories-btn").addEventListener("click", () => {
@@ -96,6 +98,9 @@ $("#add-btn").addEventListener("click", (e) => {
     e.preventDefault()
     newOperation()
 })
+//Esto va en initializeApp
+setData("operations", allOperations)
+newOperations(allOperations)
 
 
 
