@@ -64,8 +64,7 @@ $("#add-btn").addEventListener("click", () => {
 })
 //Add New operation to the table//
 const newOperations = (operations) => {
-    for (const operation of operations) {
-        const {id, description, amount, type, category, date} = operation
+    for (const {id, description, amount, type, category, date} of operations) {
         $("#table").innerHTML += `
         <td>${description}</td>
         <td>${amount}</td>
@@ -80,7 +79,7 @@ const saveNewOperation = () => {
     return {
         id: randomId(),
         description: $("#description").value,
-        amount: $("#amount").value,
+        amount: $("#amount").valueAsNumber,
         type: $("#type").value,
         category: $("#category").value,
         date: $("#date").value
@@ -90,8 +89,14 @@ const newOperation = () => {
     const currentOperation = getData("operations")
     const newOperation = saveNewOperation()
     currentOperation.push(newOperation)
+    setData("operations", currentOperation)
 }
+
 $("#add-btn").addEventListener("click", (e) => {
     e.preventDefault()
     newOperation()
 })
+
+
+
+
